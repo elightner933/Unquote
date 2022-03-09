@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Unquote</string>
+    <string name="submit">Submit</string>
+    <string name="questions_remaining">questions remaining</string>
+    <string name="num_questions">99</string>
+    <string name="quote_image">Quote Image</string>
 </resources>
