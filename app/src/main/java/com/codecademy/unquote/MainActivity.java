@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // TODO 2-G: Show app icon in ActionBar
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        // Show app icon in ActionBar
+        Objects.requireNonNull(getSupportActionBar()).setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.drawable.ic_unquote_icon);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         getSupportActionBar().setElevation(0);
@@ -75,12 +76,12 @@ public class MainActivity extends AppCompatActivity {
         questions = new ArrayList<>();
 
         // TODO 2-H: Provide actual drawables for each of these questions!
-        Question question0 = new Question(0, "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
-        Question question1 = new Question(0, "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
-        Question question2 = new Question(0, "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
-        Question question3 = new Question(0, "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
-        Question question4 = new Question(0, "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
-        Question question5 = new Question(0, "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
+        Question question0 = new Question(R.drawable.img_quote_0, getString(R.string.question0), getString(R.string.question0_answer0), getString(R.string.question0_answer1), getString(R.string.question0_answer2), getString(R.string.question0_answer3), 2);
+        Question question1 = new Question(R.drawable.img_quote_1, getString(R.string.question1), getString(R.string.question1_answer0), getString(R.string.question1_answer1), getString(R.string.question1_answer2), getString(R.string.question1_answer3), 0);
+        Question question2 = new Question(R.drawable.img_quote_2, getString(R.string.question2), getString(R.string.question2_answer0), getString(R.string.question2_answer1), getString(R.string.question2_answer2), getString(R.string.question2_answer3), 1);
+        Question question3 = new Question(R.drawable.img_quote_3, getString(R.string.question3), getString(R.string.question3_answer0), getString(R.string.question3_answer1), getString(R.string.question3_answer2), getString(R.string.question3_answer3), 3);
+        Question question4 = new Question(R.drawable.img_quote_4, getString(R.string.question4), getString(R.string.question4_answer0), getString(R.string.question4_answer1), getString(R.string.question4_answer2), getString(R.string.question4_answer3), 1);
+        Question question5 = new Question(R.drawable.img_quote_5, getString(R.string.question5), getString(R.string.question5_answer0), getString(R.string.question5_answer1), getString(R.string.question5_answer2), getString(R.string.question5_answer3), 0);
 
         questions.add(question0);
         questions.add(question1);
