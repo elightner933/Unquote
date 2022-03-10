@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/iv_main_question_image"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
@@ -20,7 +20,7 @@
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <TextView
-        android:id="@+id/num_questions"
+        android:id="@+id/tv_main_questions_remaining_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -34,29 +34,29 @@
         tools:layout_editor_absoluteY="547dp" />
 
     <TextView
-        android:id="@+id/questions_remaining_text"
+        android:id="@+id/tv_main_questions_remaining"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:text="@string/questions_remaining"
-        app:layout_constraintBottom_toBottomOf="@id/num_questions"
-        app:layout_constraintLeft_toRightOf="@id/num_questions"
-        app:layout_constraintTop_toTopOf="@id/num_questions"
+        app:layout_constraintBottom_toBottomOf="@id/tv_main_questions_remaining_count"
+        app:layout_constraintLeft_toRightOf="@id/tv_main_questions_remaining_count"
+        app:layout_constraintTop_toTopOf="@id/tv_main_questions_remaining_count"
         tools:layout_editor_absoluteX="128dp"
         tools:layout_editor_absoluteY="690dp" />
 
     <Button
-        android:id="@+id/submit_btn"
+        android:id="@+id/btn_main_submit_answer"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="@string/submit"
-        app:layout_constraintBottom_toBottomOf="@id/questions_remaining_text"
+        app:layout_constraintBottom_toBottomOf="@id/tv_main_questions_remaining"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/questions_remaining_text"
+        app:layout_constraintTop_toTopOf="@id/tv_main_questions_remaining"
         tools:layout_editor_absoluteX="341dp"
         tools:layout_editor_absoluteY="694dp" />
 
@@ -68,14 +68,14 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@id/submit_btn"
+        app:layout_constraintBottom_toTopOf="@id/btn_main_submit_answer"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="275dp">
 
         <Button
-            android:id="@+id/answer2"
+            android:id="@+id/btn_main_answer_2"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
             android:text="Button" />
 
         <Button
-            android:id="@+id/answer3"
+            android:id="@+id/btn_main_answer_3"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -106,7 +106,7 @@
         tools:layout_editor_absoluteY="275dp">
 
         <Button
-            android:id="@+id/answer0"
+            android:id="@+id/btn_main_answer_0"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -114,7 +114,7 @@
             android:text="Button" />
 
         <Button
-            android:id="@+id/answer1"
+            android:id="@+id/btn_main_answer_1"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -123,7 +123,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tv_main_question_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
