@@ -26,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         // TODO 2-G: Show app icon in ActionBar
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_unquote_icon);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setElevation(0);
 
         setContentView(R.layout.activity_main);
 
