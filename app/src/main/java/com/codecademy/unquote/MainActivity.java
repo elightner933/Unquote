@@ -52,7 +52,34 @@ public class MainActivity extends AppCompatActivity {
         answer3Button = findViewById(R.id.btn_main_answer_3);
         submitButton = findViewById(R.id.btn_main_submit_answer);
 
-        // TODO 4-E: set onClickListener for each answer Button
+        // set onClickListener for each answer Button
+        answer0Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onAnswerSelected(0);
+            }
+        });
+
+        answer1Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onAnswerSelected(1);
+            }
+        });
+
+        answer2Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onAnswerSelected(2);
+            }
+        });
+
+        answer3Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onAnswerSelected(3);
+            }
+        });
 
         // TODO 5-A: set onClickListener for the submit answer Button
 
@@ -74,7 +101,31 @@ public class MainActivity extends AppCompatActivity {
         questionsRemainingTextView.setText(Integer.toString(questionRemaining));
     }
 
-    // TODO 4-A: onAnswerSelected(int answerSelected) {...}
+    public void onAnswerSelected(int answerSelected) {
+        Question currentQuestion = getCurrentQuestion();
+        currentQuestion.playerAnswer = answerSelected;
+
+        answer0Button.setText(currentQuestion.answer0);
+        answer1Button.setText(currentQuestion.answer1);
+        answer2Button.setText(currentQuestion.answer2);
+        answer3Button.setText(currentQuestion.answer3);
+
+        switch (answerSelected) {
+            case 0:
+                answer0Button.setText("✔ " + currentQuestion.answer0);
+                break;
+            case 1:
+                answer1Button.setText("✔ " + currentQuestion.answer1);
+                break;
+            case 2:
+                answer2Button.setText("✔ " + currentQuestion.answer2);
+                break;
+            case 3:
+                answer3Button.setText("✔ " + currentQuestion.answer3);
+                break;
+            default:
+        }
+    }
 
     void onAnswerSubmission() {
         Question currentQuestion = getCurrentQuestion();
