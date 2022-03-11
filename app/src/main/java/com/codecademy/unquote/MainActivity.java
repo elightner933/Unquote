@@ -59,7 +59,15 @@ public class MainActivity extends AppCompatActivity {
         startNewGame();
     }
 
-    // TODO 3-F: displayQuestion(Question question) {...}
+    // display the question information to the user
+    public void displayQuestion(Question question) {
+        questionImageView.setImageResource(question.imageId);
+        questionTextView.setText(question.questionText);
+        answer0Button.setText(question.answer0);
+        answer1Button.setText(question.answer1);
+        answer2Button.setText(question.answer2);
+        answer3Button.setText(question.answer3);
+    }
 
     // update the remaining questions counter
     public void displayQuestionsRemaining(int questionRemaining) {
@@ -85,8 +93,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             chooseNewQuestion();
 
-            // TODO 3-H.i: uncomment after implementing displayQuestion(Question)
-            // displayQuestion(getCurrentQuestion());
+            displayQuestion(getCurrentQuestion());
         }
     }
 
@@ -115,8 +122,7 @@ public class MainActivity extends AppCompatActivity {
 
         displayQuestionsRemaining(questions.size());
 
-        // TODO 3-H.ii: Uncomment after implementing displayQuestion(Question)
-        // displayQuestion(firstQuestion);
+        displayQuestion(firstQuestion);
     }
 
     Question chooseNewQuestion() {
