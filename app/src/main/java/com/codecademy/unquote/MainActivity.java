@@ -81,7 +81,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // TODO 5-A: set onClickListener for the submit answer Button
+        // set onClickListener for the submit answer Button
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onAnswerSubmission();
+            }
+        });
 
         startNewGame();
     }
@@ -140,7 +146,17 @@ public class MainActivity extends AppCompatActivity {
             String gameOverMessage = getGameOverMessage(totalCorrect, totalQuestions);
 
             // TODO 5-D: Show a popup instead
-            System.out.println(gameOverMessage);
+            AlertDialog.Builder gameOverDialogBuilder = new AlertDialog.Builder(MainActivity.this);
+            gameOverDialogBuilder.setCancelable(false);
+            gameOverDialogBuilder.setTitle("Game Over!");
+            gameOverDialogBuilder.setMessage(gameOverMessage);
+            gameOverDialogBuilder.setPositiveButton("Play Again!", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    startNewGame();
+                }
+            });
+            gameOverDialogBuilder.create().show();
         } else {
             chooseNewQuestion();
 
